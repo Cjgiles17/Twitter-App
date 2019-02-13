@@ -23,6 +23,12 @@ class HomeTableTableViewController: UITableViewController {
 
         self.tableView.refreshControl = myRefreshControl
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //  self.tableView.reloadData()
+    }
 
     @objc func loadTweets(){
         
@@ -89,6 +95,10 @@ class HomeTableTableViewController: UITableViewController {
         
         UserDefaults.standard.set(false, forKey: "userLoggedIn")
     }
+    
+    
+    
+    
     
     
     
